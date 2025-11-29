@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Anna Laura — Escape Pod</title>
+  <meta name="description" content="Immersive escape-pod experience — starfield, nebula, ripple and holographic UI." />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas layers -->
+  <canvas id="glowCanvas" class="layer"></canvas>      <!-- nebula glow / warp -->
+  <canvas id="starfield" class="layer"></canvas>      <!-- starfield / warp -->
+  <canvas id="particleCanvas" class="layer"></canvas> <!-- particles & dust -->
+  <canvas id="rippleCanvas" class="layer"></canvas>   <!-- ripple / touch waves -->
+
+  <!-- Holographic UI panels -->
+  <div id="hud" class="hud">
+    <div class="panel" data-panel="status">
+      <h4>ESCAPE POD · STATUS</h4>
+      <div class="meter">Hull Integrity: <span id="hull">74%</span></div>
+      <div class="meter">Power: <span id="power">41%</span></div>
+    </div>
+
+    <div class="panel" data-panel="nav">
+      <h4>NAV SYSTEMS</h4>
+      <div class="mini">Vector: <span id="vec">↑ 0.32</span></div>
+      <div class="mini">Warp: <span id="warp">—</span></div>
+    </div>
+
+    <div class="panel" data-panel="comm">
+      <h4>COMM</h4>
+      <div class="mini">Signal: <span id="sig">FAINT</span></div>
+      <div class="mini">Beacon: <span id="beacon">OFF</span></div>
+    </div>
+  </div>
+
+  <!-- small hint but can be hidden -->
+  <div id="hint" class="hint">Move mouse • drag panels • scroll to warp</div>
+
+  <script src="main.js"></script>
+</body>
+</html>
